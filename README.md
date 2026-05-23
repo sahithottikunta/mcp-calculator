@@ -27,3 +27,20 @@ python -m venv .venv
 
 # Activate the virtual environment (Mac/Linux)
 source .venv/bin/activate
+3. Install Dependencies
+Install the required Model Context Protocol SDK with developer CLI capabilities:
+
+Bash
+pip install "mcp[cli]"
+🔬 Testing with MCP Inspector
+Since MCP servers utilize standard input/output (stdio) channels to communicate with language models, you cannot test them by running a normal Python execution command. Use the official visual web inspector instead:
+
+Bash
+npx @modelcontextprotocol/inspector python calculator_server.py
+Open the local link generated in your browser (typically http://localhost:5173).
+
+Set Command to python.
+
+Set Arguments to calculator_server.py.
+
+Click Connect to begin interacting with the tools, resources, and prompts visually!
